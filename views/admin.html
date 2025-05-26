@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administración - MediReserva</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <header class="main-header">
+        <!-- Mismo header que index.html -->
+    </header>
+
+    <main class="container">
+        <h1>Panel de Administración</h1>
+        
+        <div class="admin-tabs">
+            <button class="tab-btn active" data-tab="appointments">Citas</button>
+            <button class="tab-btn" data-tab="availability">Disponibilidad</button>
+            <button class="tab-btn" data-tab="users">Usuarios</button>
+        </div>
+        
+        <div class="tab-content active" id="appointments-tab">
+            <!-- Lista de citas -->
+        </div>
+        
+        <div class="tab-content" id="availability-tab">
+            <!-- Gestión de disponibilidad -->
+        </div>
+        
+        <div class="tab-content" id="users-tab">
+            <!-- Gestión de usuarios -->
+        </div>
+    </main>
+
+    <footer class="main-footer">
+        <!-- Mismo footer que index.html -->
+    </footer>
+
+    <script src="../js/admin.js"></script>
+</body>
+</html>
