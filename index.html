@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MediReserva - Sistema de Citas Médicas</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="container">
+            <div class="logo">
+                <h1>MediReserva</h1>
+                <p>Sistema de gestión de citas médicas</p>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#" id="login-link">Iniciar Sesión</a></li>
+                    <li><a href="#" id="register-link">Registrarse</a></li>
+                    <li><a href="#" id="dashboard-link" class="hidden">Mi Panel</a></li>
+                    <li><a href="#" id="logout-link" class="hidden">Cerrar Sesión</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="hero">
+            <div class="hero-content">
+                <h2>Reserva tu cita médica de manera fácil y rápida</h2>
+                <p>Encuentra disponibilidad y gestiona tus citas con nuestros profesionales de la salud.</p>
+                <a href="#calendar-section" class="btn btn-primary">Ver Disponibilidad</a>
+            </div>
+            <div class="hero-image">
+                <img src="assets/medical-appointment.svg" alt="Cita médica">
+            </div>
+        </section>
+
+        <section id="calendar-section" class="calendar-section">
+            <h2>Disponibilidad de Citas</h2>
+            <div class="calendar-controls">
+                <button id="prev-week" class="btn btn-secondary"><i class="fas fa-chevron-left"></i> Semana Anterior</button>
+                <span id="current-week" class="week-display">Semana del 12 al 18 de Junio</span>
+                <button id="next-week" class="btn btn-secondary">Semana Siguiente <i class="fas fa-chevron-right"></i></button>
+            </div>
+            <div class="calendar-container">
+                <div class="calendar-header">
+                    <div class="time-column">Hora</div>
+                    <div class="day-column">Lunes</div>
+                    <div class="day-column">Martes</div>
+                    <div class="day-column">Miércoles</div>
+                    <div class="day-column">Jueves</div>
+                    <div class="day-column">Viernes</div>
+                </div>
+                <div class="calendar-body" id="calendar-body">
+                    <!-- Las horas y citas se generarán dinámicamente con JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <section class="appointment-modal hidden" id="appointment-modal">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <h3>Reservar Cita</h3>
+                <form id="appointment-form">
+                    <input type="hidden" id="selected-date">
+                    <input type="hidden" id="selected-time">
+                    
+                    <div class="form-group">
+                        <label for="patient-name">Nombre Completo</label>
+                        <input type="text" id="patient-name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="patient-email">Correo Electrónico</label>
+                        <input type="email" id="patient-email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="appointment-notes">Notas (opcional)</label>
+                        <textarea id="appointment-notes" rows="3"></textarea>
+                    </div>
+                    
+                    <div class="form-actions">
+                        <button type="button" class="btn btn-secondary close-modal">Cancelar</button>
+                        <button type="submit" class="btn btn-primary">Confirmar Cita</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-section">
+                <h4>MediReserva</h4>
+                <p>Sistema de gestión de citas médicas en la nube.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Contacto</h4>
+                <p>info@medireserva.com</p>
+                <p>+1 234 567 890</p>
+            </div>
+            <div class="footer-section">
+                <h4>Legal</h4>
+                <p>Términos y condiciones</p>
+                <p>Política de privacidad</p>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2023 MediReserva. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="js/auth.js"></script>
+    <script src="js/calendar.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
