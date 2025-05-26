@@ -1,0 +1,79 @@
+/* Estilos para tablets (768px - 1024px) */
+@media (max-width: 1024px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .hero-image {
+        margin-top: 2rem;
+    }
+    
+    .calendar-header, .calendar-body {
+        grid-template-columns: 80px repeat(5, 1fr);
+    }
+    
+    .time-column, .day-column, .time-slot {
+        padding: 0.5rem;
+    }
+}
+
+/* Estilos para móviles (hasta 767px) */
+@media (max-width: 767px) {
+    .main-nav ul {
+        flex-direction: column;
+        align-items: flex-end;
+    }
+    
+    .main-nav li {
+        margin-bottom: 0.5rem;
+    }
+    
+    .hero-content h2 {
+        font-size: 1.8rem;
+    }
+    
+    .calendar-controls {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .calendar-header, .calendar-body {
+        grid-template-columns: 60px repeat(5, 1fr);
+        font-size: 0.8rem;
+    }
+    
+    .time-column, .day-column, .time-slot {
+        padding: 0.3rem;
+        font-size: 0.7rem;
+    }
+    
+    .modal-content {
+        width: 95%;
+        padding: 1rem;
+    }
+    
+    .form-actions {
+        flex-direction: column;
+    }
+    
+    .btn {
+        width: 100%;
+        margin-bottom: 0.5rem;
+    }
+}
+
+/* Estilos para pantallas muy pequeñas (hasta 480px) */
+@media (max-width: 480px) {
+    .logo h1 {
+        font-size: 1.5rem;
+    }
+    
+    .calendar-header, .calendar-body {
+        grid-template-columns: 40px repeat(5, 1fr);
+    }
+    
+    .time-slot {
+        font-size: 0.6rem;
+    }
+}
